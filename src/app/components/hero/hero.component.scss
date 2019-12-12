@@ -1,0 +1,64 @@
+.hero {
+    width: 100%;
+    height: 55vh;
+    // background-image: url('images/back-massage_bg.png');
+    background-image: url('images/small-flower_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    overflow-x: hidden;
+
+    @media(max-width: 900px) {
+        height: 30vh;
+    }
+
+    @media(max-width: 600px) {
+        height: 20vh;
+    }
+
+
+    .content {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        height: 55vh;
+
+        @media(max-width: 900px) {
+            height: 30vh;
+        }
+
+        @media(max-width: 600px) {
+            display: none;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-size: 4rem;
+            text-shadow: 2px 2px 4px #333;
+            text-align: center;
+
+            @media(max-width: 900px) {
+                font-size: 3rem;
+            }
+           
+        }
+        
+        h2 {
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-shadow: 2px 2px 4px #333;
+            font-size: 2rem;
+        
+        }
+    }
+
+}
+
+
+

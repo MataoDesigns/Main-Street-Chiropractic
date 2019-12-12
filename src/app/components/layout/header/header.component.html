@@ -1,0 +1,37 @@
+<header>
+  <div class="logo">
+    <a routerLink="/">
+      <img src="assets/images/png/logo.png" alt="Main Street Chiropractor">
+      Main Street Chiropractic
+    </a>
+  </div>
+  <div class="contact-info">
+    <div class="contact-links">
+      <a href="tel:5867845470">
+        <fa name="phone" class="phoneIcon"></fa> <span class="hide-mobile"> Call Now: 586-784-5470</span>
+      </a>
+    </div>
+    <button class="hamburger" (click)="toggleNav()">
+      <span class="close" *ngIf="show">X</span>
+      <div *ngIf="!show" class="lines"></div>
+      <div *ngIf="!show" class="lines"></div>
+      <div *ngIf="!show" class="lines"></div>
+    </button>
+    <nav>
+      <a routerLink="/" class="borderRight">Home</a>
+      <a routerLink="meet-the-team" class="borderRight">Meet the team</a>
+      <a routerLink="conditions-we-treat" class="borderRight">Conditions We Treat</a>
+      <a routerLink="contact" class="borderRight">Contact Us</a>
+      <a routerLink="faq">FAQ</a>
+    </nav>
+
+    <div class="mobileNav" *ngIf="show">
+      <a (click)="toggleNav()" routerLink="/" class="borderRight">Home</a>
+      <a (click)="toggleNav()" routerLink="meet-the-team" class="borderRight">Meet the team</a>
+      <a (click)="toggleNav()" routerLink="conditions-we-treat" class="borderRight">Conditions We Treat</a>
+      <a (click)="toggleNav()" routerLink="contact" class="borderRight">Contact Us</a>
+      <a (click)="toggleNav()" routerLink="faq">FAQ</a>
+    </div>
+  </div>
+
+</header>

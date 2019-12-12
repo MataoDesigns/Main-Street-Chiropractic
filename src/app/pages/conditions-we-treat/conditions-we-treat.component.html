@@ -1,0 +1,29 @@
+<div class="container mt-5">
+
+  <div class="row">
+    <div class="col">
+      <h2 class="text-center page-header">Common Conditions We Treat</h2>
+    </div>
+  </div>
+
+  <section class="conditions mt-5">
+    <div class="row">
+
+      <article class="col-sm-12 col-md-6 col-lg-4 p-5" *ngFor="let service of services">
+        <!-- Image -->
+        <img src="{{ service.Image }}" alt="{{ service.Name }}" class="img-fluid">
+        <h3 class="condition_title font-weight-bold border-bottom border-primary mt-2">
+          {{ service.Name }}
+        </h3>
+        <!-- Description -->
+        <p class="condition_description">
+          {{ service.Description }}
+        </p>
+      </article>
+
+
+    </div>
+  </section>
+
+
+</div>

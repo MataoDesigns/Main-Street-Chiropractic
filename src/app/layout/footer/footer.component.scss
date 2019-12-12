@@ -1,0 +1,29 @@
+.row {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 5px;
+}
+
+div {
+    color: #ffffff;
+}
+
+.matao {
+    display: flex;
+    align-items: center;
+    color: #e3e3e3;
+    text-align: right;
+     a {
+         color: #e3e3e3;
+         text-decoration: none;
+
+         &:hover {
+             text-decoration: underline;
+         }
+
+         img {
+            height: 40px;
+         }
+     }
+}

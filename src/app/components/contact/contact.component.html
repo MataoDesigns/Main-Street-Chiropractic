@@ -1,0 +1,72 @@
+<section class="contact" id="contactSection">
+  <h3 class="text-center mb-5">Contact Us</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="row">
+          <div class="col-xs-12 col-md-4 contact-links">
+            <fa name="phone"></fa>
+            <a href="tel:586-784-5470">(586) 784-5470</a>
+          </div>
+          <div class="col-xs-12 col-md-4 contact-links">
+            <fa name="envelope"></fa>
+            <a href="mailto:mainstchiro2@gmail.com">mainstchiro2@gmail.com</a>
+          </div>
+          <div class="col-xs-12 col-md-4 contact-links">
+            <fa name="map-pin"></fa>
+            22919 W. Main Street
+            <br>
+            Armada, MI 48005
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="col-lg-12">
+
+
+        <form class="col-xs-12 col-lg-push-3 col-lg-9 p-4 m-auto" (ngSubmit)="processForm()" novalidate id="sendMessageForm">
+          <h3 class="text-center mb-5">Send Us a Message</h3>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" name="name" placeholder="John Doe" [(ngModel)]="name" required
+              minlength="3" #nameInput="ngModel" />
+            <small class="text-danger" *ngIf="nameInput.invalid && nameInput.dirty">
+              Name is required and needs to be at least 3 characters long.
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" type="email" name="email" placeholder="jdoe@email.com" [(ngModel)]="email"
+              required email #emailInput="ngModel" />
+            <small class="text-danger" *ngIf="emailInput.invalid && emailInput.dirty">
+              Please provide a valid email address.
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input class="form-control" type="tel" name="phone" placeholder="(555) 555-5555" [(ngModel)]="phone"
+              required phone #phoneInput="ngModel" maxlength="14" />
+            <small class="text-danger" *ngIf="phoneInput.invalid && phoneInput.dirty">
+              Phone is required and cannot exceed 14 characters.
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" class="form-control" rows="4" [(ngModel)]="message" required
+              #messageInput="ngModel"></textarea>
+            <small class="text-danger" *ngIf="messageInput.invalid && messageInput.dirty">
+              A message is required.
+            </small>
+          </div>
+          <div class="form-group">
+            <re-captcha (resolved)="resolved($event)" [siteKey]="sitekey"></re-captcha>
+          </div>
+          <div class="alert-success alert u-Hide" id="successMessage">Message Sent</div>
+          <div class="alert-danger alert u-Hide" id="errorMessage"></div>
+          <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+//variables
+
+//fonts
+$primary: 'Open Sans Condensed', sans-serif;
+$secondary: 'Cormorant Upright', serif;
+$backup: 'Goudy Bookletter 1911', serif;
+
+// Colors
+$dark-gray: #231f20;
+$white: #fffeff;
+$blue: #0000ff;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $primary;
+}
+
+body {
+    overflow-x: hidden;
+}

@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h2 class="text-center page-header">Frequently Asked Questions</h2>
+    </div>
+  </div>
+  <div class="row" *ngFor="let qna of qnas">
+    <div class="col">
+      <fa name="comments"></fa>
+      <p class="question">{{qna.question}}</p>
+      <p class="answer">{{qna.answer}}</p>
+    </div>
+  </div>
+</div>

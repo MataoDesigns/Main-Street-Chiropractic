@@ -1,0 +1,39 @@
+.contact {
+    overflow-x: hidden;
+}
+
+.contact-links {
+
+    font-size: 1.5rem;
+
+    fa {
+        font-size: 3rem;
+        color: #333;
+        display: block;
+    }
+
+    a {
+        font-size: 2rem;
+        color: #333;
+        text-decoration: none;
+        @media (max-width: 1020px) {
+            font-size: 1.3rem;
+        }
+    }
+
+    &:hover {
+        fa {
+            color: #0069D9;
+            transition: 1 all ease-in-out;
+        }
+    }
+
+
+    @media (max-width: 1020px) {
+        font-size: 1.3rem;
+    }
+}
+
+.u-Hide {
+    display: none;
+}
